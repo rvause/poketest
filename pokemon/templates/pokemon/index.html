@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pokémon Lookup</title>
+  <script>
+    function handleSubmit(ev) {
+      if (ev.target.id.value) window.location = "/" + ev.target.id.value + "/";
+      ev.preventDefault();
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.getElementById('lookup-form');
+      form.addEventListener('submit', handleSubmit);
+    });
+  </script>
+</head>
+<body>
+  <p>Enter Pokémon ID to look up</p>
+  <form id="lookup-form">
+    <input type="text" name="id">
+    <input type="submit" value="Lookup">
+  </form>
+</body>
+</html>
